@@ -1,0 +1,144 @@
+.mail-two {
+  height: 60rem;
+  // background-image: url('../../images/backgroun-mail-one.png');
+  background-size: cover;
+  position: relative;
+  width: 33.4rem;
+  img {
+    position: absolute;
+    z-index: -10;
+    height: 100%;
+    object-fit: cover;
+  }
+  .text-mail-two {
+    position: relative;
+    transform: translate(0%, -50%);
+    padding: 1rem 2rem;
+    -webkit-transform: unset;
+    max-width: 35rem;
+    height: 100%;
+    h1.title {
+      text-transform: uppercase;
+      font-family: 'PlexesPro black';
+      margin: 0;
+      line-height: 0.8;
+      padding: 1rem;
+      top: 13.7%;
+      color: white;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      width: 26rem;
+      span {
+        font-size: 2.8rem;
+        color: #ab3912;
+        font-weight: 700;
+      }
+    }
+    h2.subtitle {
+      font-family: 'Gatorade black';
+      font-size: 2.6rem;
+       -webkit-text-stroke: unset;
+       color: white;
+    }
+    h2.thanks {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 45%;
+      left: 50%;
+      color: #fb5030;
+      -webkit-text-stroke: unset;
+      font-size: 2rem;
+      width: 18.1rem;
+      text-align: center;
+      span {
+        color: white;
+      }
+    }
+    h2.gatorade {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      color: white;
+      -webkit-text-stroke: unset;
+      width: 26rem;
+      text-align: center;
+      color: white;
+    }
+    h2.successful {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 57%;
+      font-size: 1.5rem;
+      color: white;
+      -webkit-text-stroke: unset;
+      width: 11.8rem;
+      text-align: center;
+    }
+    p {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 60%;
+      font-size: 1rem;
+      color: white;
+      -webkit-text-stroke: unset;
+      width: 24rem;
+      line-height: 1;
+      text-align: center;
+    }
+  }
+  .image-qr {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999;
+    text-align: center;
+    background: black;
+    img {
+      position: relative;
+    }
+  }
+  .button-buy {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    background: #ff4700;
+    border-radius: 1rem;
+    width: 17rem;
+    height: 2.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      text-transform: uppercase;
+      color: white !important;
+      font-family: 'Montserrat medium';
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background-image: url('../../images/icon-button-mail-one.png');
+        background-repeat: no-repeat;
+        transform: translateY(0.2rem);
+        margin-left: 0.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+/**
+ * login.scss
+ *
+ * These styles apply to the login page.
+ * The (.link-text) class was used to style the link type texts.
+ *
+ * Index
+ * - Login
+ *   |- Background image
+ *   |- Form login
+ *     |- Title
+ *     |- Form field
+ *     |- Error field
+ *     |- Flag password
+ *     |- Button
+ *     |- Text success
+ *     |- Link
+*/
+// variable import
+@import "../base/variables";
+
+// /*---| Login |---*/
+.login {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  //Background image
+  &::before {
+    content: '';
+    background: url('../../images/bg-login-mobil.png') center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    @media(min-width: 768px) {
+      background: url('../../images/bg-login-desktop.png') center/cover no-repeat;
+    }
+  }
+  //Form login
+  .box-form {
+    position: relative;
+    text-align: center;
+    color: $black;
+    width: 100%;
+    margin: 0 auto;
+    padding: 6rem 0 25px 0;
+    @media(min-width: 576px) {
+      padding: 10rem 0 0 0;
+    }
+    @media(min-width: 1024px) {
+      width: 675px;
+    }
+    @media(min-width: 1450px) {
+      padding: 13.8rem 0 0 0;
+    }
+    @media(min-width: 2000px) {
+      padding: 20rem 0 0 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      //Title
+      .title-form {
+        margin-bottom: 80px;
+        @media(min-width: 1024px) {
+          margin-bottom: 48px;
+        }
+        @media(min-width: 1450px) {
+          margin-bottom: 40px;
+        }
+        @media(min-width: 2000px) {
+          margin-bottom: 14%;
+        }
+        h2  {
+          text-transform: uppercase;
+          font-size: 3rem;
+          color: white;
+          -webkit-text-stroke: 0;
+          @media(min-width: 576px) {
+            font-size: 4.9rem;
+            letter-spacing: 10px;
+            font-weight: 900;
+          }
+          @media(min-width: 1450px) {
+            font-size: 6rem;
+          }
+        }
+      }
+      //Form field
+      .form-group {
+        margin: 0 auto 10px;
+        @media(min-width: 1024px) {
+          margin: 0 auto 26px;
+        }
+        input {
+          height: 47px;
+          width: 255px;
+          font-family: $g-black;
+          font-size: 1rem;
+          color: $gray;
+          text-align: center;
+          margin: 0 auto;
+          &::placeholder {
+            color: $gray;
+            text-transform: uppercase;
+          }
+          @media(min-width: 768px) {
+            width: 390px;
+            font-family: $g-medium;
+          }
+          @media(min-width: 1024px) {
+            height: 63px;
+            font-size: 1.2rem;
+          }
+          @media(min-width: 1450px) {
+            height: 75px;
+            width: 420px;
+          }
+        }
+        &:nth-child(4) {
+          margin: 0 auto 6px;
+          height: 95px;
+        }
+        &.error {
+          input {
+            border: 2px solid $red;
+          }
+          ::placeholder {
+            color:$red;
+          }
+        }
+        .error-authentication {
+          font-size: 1rem;
+        }
+      }
+      //Error field
+      //Flag password
+      .text-error {
+        color: $red;
+        padding: 0 12px;
+        font-family: $g-black;
+        font-size: 1.1rem;
+        width: 255px;
+        line-height: 1;
+        text-align: center;
+        margin: 0 auto;
+        @media(min-width: 768px) {
+          padding: 5px 0 0;
+          font-size: 1.3rem;
+          letter-spacing: -0.5px;
+          width: 390px;
+        }
+      }
+      //Button
+      .button-fifth {
+        margin: 28px auto 18px;
+        @media(min-width: 1450px) {
+          width: 260px;
+        }
+        input {
+          width: 100%;
+          @media(min-width: 1450px) {
+            font-size: 1.4rem;
+          }
+        }
+        @media(min-width: 1024px) {
+          margin: 44px auto 18px;
+        }
+      }
+      //Text success
+      .text-success {
+        color: green;
+        padding: 0 12px;
+        font-family: $g-black;
+        font-size: 1.1rem;
+        width: 255px;
+        line-height: 1;
+        text-align: center;
+        margin: 5px auto;
+        @media(min-width: 768px) {
+          font-size: 1.3rem;
+          letter-spacing: -0.5px;
+          width: 390px;
+        }
+        a {
+          font-family: $g-black;
+          color: $orange_primary;
+        }
+      }
+      //Link
+      .link-text {
+        font-family: $g-black;
+        font-size: 1.1rem;
+        text-decoration: underline;
+        color: $white;
+        @media(min-width: 1024px) {
+          font-size: 1.3rem;
+          letter-spacing: -0.3px;
+        }
+      }
+    }
+  }
+}

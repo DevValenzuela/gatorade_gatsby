@@ -1,0 +1,105 @@
+@import "../base/variables";
+
+.mail-three {
+  height: 50rem;
+  // background-image: url('../../images/backgroun-mail-one.png');
+  background-size: cover;
+  position: relative;
+  width: 33.4rem;
+  img {
+    position: absolute;
+    z-index: -10;
+    height: 100%;
+    object-fit: cover;
+  }
+  .text-mail-three {
+    position: relative;
+    transform: translate(0%, -50%);
+    padding: 1rem 2rem;
+    -webkit-transform: unset;
+    max-width: 35rem;
+    height: 100%;
+    h1 {
+      text-transform: uppercase;
+      font-family: "PlexesPro black";
+      margin: 0;
+      line-height: 0.8;
+      padding: 1rem;
+      top: 35%;
+      color: white;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 1.8rem;
+      position: absolute;
+      -webkit-transform: translate(0%, -50%);
+      transform: translate(0%, -50%);
+      left: 5%;
+      width: 21rem;
+      span {
+        font-size: 3.4rem;
+        color: white;
+        font-weight: 700;
+        font-family: $g-black;
+      }
+    }
+    h2.formula {
+      font-size: 2.6rem;
+      -webkit-text-stroke: unset;
+      width: 24rem;
+      font-size: 1.4rem;
+      position: absolute;
+      transform: translate(0%, -50%);
+      left: 5%;
+      top: 42%;
+      color: white;
+      text-align: left;
+      padding: 1rem;
+    }
+    h2.verification {
+      position: absolute;
+      font-size: 1.4rem;
+      -webkit-text-stroke: unset;
+      color: white;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 55%;
+      width: 13.7rem;
+      text-align: center;
+      line-height: 1.4;
+      span {
+        color: #fb5030;
+      }
+    }
+  }
+  .button-redeem {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 66%;
+    left: 50%;
+    background: #ff4700;
+    border-radius: 1rem;
+    width: 12rem;
+    height: 2.1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      text-transform: uppercase;
+      color: white !important;
+      font-family: 'Montserrat medium';
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background-image: url('../../images/icon-button-mail-one.png');
+        background-repeat: no-repeat;
+        transform: translateY(0.2rem);
+        margin-left: 0.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,225 @@
+/**
+ * regist.scss
+ *
+ * These styles are from the first carousel.
+ *
+ * Index
+ * - Regist
+ *   |- Background image
+ *   |- Registration form box
+ *     |- Title
+ *     |- Form
+ *       |- Form field
+ *       |- Intermediate title
+ *       |- Button
+*/
+// variable import
+@import "../base/variables";
+// /*---| Regist |---*/
+.single-component {
+  position: relative;
+  height: 1020px;
+  min-height: 72rem;
+  //Background image
+  @media(min-width: 1450px) {
+    height: 1500px;
+  }
+  &::before {
+    content: "";
+    background-image: url('../../images/bg-regist.png');
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  //Registration form box
+  .register {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+    max-width: 504px;
+    @media(min-width: 1024px) {
+      top: 8rem;
+    }
+    @media(min-width: 1450px) {
+      top: 14rem;
+    }
+    //Title
+    .title-register {
+      text-align: center;
+      margin-bottom: 9px;
+      @media(min-width: 1024px) {
+        margin-bottom: 40px;
+      }
+      h2 {
+        color: white;
+        -webkit-text-stroke: 0;
+        letter-spacing: 1px;
+        font-weight: 900;
+        font-size: 2.8rem;
+        @media(min-width: 1024px) {
+          font-size: 4.9rem;
+          letter-spacing: 10px;
+          font-weight: 900;
+        }
+        @media(min-width: 1450px) {
+          font-size: 5.9rem;
+        }
+      }
+    }
+    //Form
+    .form-register {
+      padding: 36px 19px;
+      text-align: center;
+      //Text success
+      .text-success {
+        color: green;
+        padding: 0 12px;
+        font-family: $g-black;
+        font-size: 1.1rem;
+        width: 255px;
+        line-height: 1;
+        text-align: center;
+        margin: 0 auto;
+        @media(min-width: 768px) {
+          font-size: 1.3rem;
+          letter-spacing: -0.5px;
+          width: 390px;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        //Form field
+        .form-group {
+          margin: 0 auto 18px;
+          @media(min-width: 1024px) {
+            margin: 0 auto 12px;
+          }
+          &:nth-child(9) {
+           margin-bottom: 30px;
+          }
+          input,select {
+            height: 38px;
+            width: 255px;
+            text-align: left;
+            font-family: $g-medium;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: $gray;
+            text-align-last: center;
+            text-align: center;
+            &::placeholder {
+              color: $gray;
+              text-transform: uppercase;
+            }
+            @media(min-width: 556px) {
+              height: 43px;
+            }
+            @media(min-width: 768px) {
+              width: 390px;
+              height: 50px;
+            }
+            @media(min-width: 1024px) {
+              text-align: center;
+              height: 63px;
+              font-size: 1.2rem;
+            }
+            @media(min-width: 1450px) {
+              height: 70px;
+              width: 430px;
+            }
+          }
+          input[type=number]::-webkit-inner-spin-button,
+          input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          input[type=password] {
+            text-transform: none;
+          }
+          //Text error
+          .text-error {
+            color: $red;
+            padding: 0 12px;
+            font-family: $g-black;
+            font-size: 1.1rem;
+            width: 255px;
+            line-height: 1;
+            text-align: center;
+            margin: 0 auto;
+            @media(min-width: 768px) {
+              letter-spacing: -0.5px;
+            }
+          }
+          .form-control {
+            padding: 1% 1%;
+            @media(min-width: 556px) {
+              padding: 2% 2%;
+            }
+            @media(min-width: 768px) {
+              padding: 3% 3%;
+            }
+            @media(min-width: 1024px) {
+              padding: 4% 4%;
+            }
+          }
+        }
+        a {
+          color: $white;
+          font-family: $h-neue;
+          font-size: 1rem;
+          text-decoration: underline;
+        }
+        //Intermediate title
+        h3 {
+          text-align: left;
+          font-size: 3.2rem;
+          line-height: 0.6;
+          letter-spacing: 0.3px;
+          margin: 65px 8px 45px;
+          span {
+            font-size: 2.1rem;
+          }
+          @media(min-width: 1024px) {
+            display: none;
+          }
+        }
+        //Button
+        .button-first {
+          margin: 30px auto 0px;
+        }
+      }
+    }
+    input[type='date']{
+      color:transparent;
+      position: relative;
+      &.not-empty{
+        &:after{
+        z-index: -1;
+        color: transparent;
+        }
+      }
+    }
+    input[type='date']:after {
+        color: #656161;
+        content: attr(placeholder);
+        width: 100%;
+        position: absolute;
+        background: white;
+        left: 0;
+        padding: 4% 1%;
+        top: 0;
+        height: 100%;
+    }
+    
+    input[type='date']:focus{
+      color: black;
+      &:after{
+        z-index: -1;
+        color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+
+.footer-mail {
+  // position: absolute;
+  // background: url('../../images/background-footer-mail.png');
+  width: 33.4rem;
+  // bottom: 0;
+  position: relative;
+  margin-top: -13.1rem;
+  .line-footer {
+    text-align: center;
+    img {
+      margin: auto;
+    }
+  }
+  .text-footer {
+    text-align: center;
+    h2 {
+      color: white;
+      font-size: 0.9rem;
+      font-family: 'Gatorade black';
+      -webkit-text-stroke: unset;
+      span {
+        color: #ff4700;
+      }
+    }
+  }
+  .icons {
+    height: 3.6rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      li {
+        padding: 1rem;
+      }
+    }
+  }
+  .image-inferior {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+    img {
+      margin: 0;
+    }
+  }
+}

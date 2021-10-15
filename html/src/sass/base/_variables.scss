@@ -1,0 +1,182 @@
+//
+// Colors
+// http://190.248.48.5/contenidos/UX/idigital/index.php/diseno/color
+//
+
+// Base colors
+// Primary
+@import "../base/fonts";
+
+$black: #000000;
+$black_light: #0A0A0A;
+$white: #FFFFFF;
+$orange_primary: #FB5030;
+$red: #FF0000;
+$red_light: #FF0A0A;
+$gray: #656161;
+$gray_light: #919191;
+$gray_secundary: #707070;
+$none: transparent;
+// Secundary
+$pink_dark: #AD1323;
+$orange_secundary: #FF9354;
+$orange_dark: #A84C16;
+$pink_primary: #FB3449;
+$pink_secundary: #FF4F61;
+$gray_light: #EAEAEA;
+$gray_three: #767676;
+$red_error: #FB3449;
+
+
+// Text color
+$f_gray: #767676;
+$f_gray_light: #EAEAEA;
+$f_red: #AD1323;
+$f_pink: #FF4F61;
+$f_brown: #A84C16;
+$f_: #FF9354;
+$f_black: #303030;
+$f_white: #FFFFFF;
+
+//
+// Typography
+// https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap
+//
+$m-medium:  'Montserrat medium';  // 800
+$g-black:  'Gatorade black';  // 800
+$g-bold:  'Gatorade bold';  // 800
+$g-light:  'Gatorade light';  // 800
+$g-medium:  'Gatorade medium';  // 800
+$h-neuelt:  'HelveticaNeueLT';  // 800
+$h-neue-regular:  'HelveticaNeue regular';  // 800
+$h-neue:  'HelveticaNeue';
+$px-black:  'PlexesPro black';  // 800
+$px-book:  'PlexesPro book';  // 800
+$px-light:  'PlexesPro light';  // 800
+$px-medium:  'PlexesPro medium';  // 800
+
+
+//font-sizes
+$fs_10: .63rem;
+$fs_12: .75rem;
+$fs_14: .88rem;
+$fs_18: 1.13rem;
+$fs_20: 1.25rem;
+$fs_22: 1.38rem;
+$fs_24: 1.5rem;
+$fs_26: 1.63rem;
+$fs_28: 1.75rem;
+$fs_30: 1.88rem;
+$fs_40: 2.5rem;
+$fs_45: 2.8rem;
+
+//
+// Breakpoints
+//
+$mobile_S: 320px;
+$mobile_M: 375px;
+$mobile_L: 480px;
+$phone-max: 688px;
+$tablet: 768px;
+$max_tablet: 1024px;
+$desktop: 1280px;
+$big-desktop: 1440px;
+
+//
+// Z indexes
+//
+$super-index: 1000;
+$max-index: 200;
+$medium-index: 100;
+$min-index: 1;
+
+//
+// variables para contenidos de banners
+//
+$con_ban: 10px, absolute, 100%;
+$con_mid: 0, 5%, center, auto, 0;
+$con_left: 0, 0, left, auto, auto;
+$con_right: auto, 0, right, auto, 0;
+$con_ban_left: 2%, 0, left, initial, 0;
+
+//
+// variables cards
+//
+// $tarjeta_gen: 24%, auto, $white;
+$tarjeta_int_gen: 32.4%, auto, $white;
+$tarjeta_desta: 48.5%, auto, $white;
+$tarjeta_iconos1: 23%, auto, transparent;
+$tarjeta_iconos2: 24%, auto, transparent;
+$tarjeta_banner: 100%, auto, $white;
+
+//
+// planes
+//
+$plan_1: 30%, auto, transparent;
+
+// for use into mixin  style-button
+$data_buttons: (
+  'first': (
+    principal_bg: $orange_primary,
+    secondary_bg: $white,
+    first_color: $white,
+    second_color: $black,
+    data_query: 'first'
+  ),
+  'second': (
+    principal_bg: $orange_primary,
+    secondary_bg: $white,
+    first_color: $white,
+    second_color: $black,
+    data_query: 'bedroom'
+  ),
+  'third': (
+    principal_bg: $black,
+    secondary_bg: $orange_primary,
+    first_color: $white,
+    second_color: $white,
+    data_query: 'second'
+  ),
+  'bedroom': (
+    principal_bg: $white,
+    secondary_bg: $orange_primary,
+    first_color: $black,
+    second_color: $white,
+    data_query: 'second'
+  ),
+  'fifth': (
+    principal_bg: $black,
+    secondary_bg: $white,
+    first_color: $white,
+    second_color: $black,
+    data_query: 'fifth'
+  ),
+  'six': (
+    principal_bg: $black,
+    secondary_bg: $orange_primary,
+    first_color: $white,
+    second_color: $white,
+    data_query: 'six'
+  ),
+  'seven': (
+    principal_bg: $orange_primary,
+    secondary_bg: $black,
+    first_color: $white,
+    second_color: $white,
+    data_query: 'third'
+  ),
+  'eight': (
+    principal_bg: $orange_primary,
+    secondary_bg: $black,
+    first_color: $white,
+    second_color: $white,
+    data_query: 'seven'
+  ),
+  'nine': (
+    principal_bg: $black,
+    secondary_bg: $orange_primary,
+    first_color: $white,
+    second_color: $white,
+    data_query: 'seven'
+  )
+);

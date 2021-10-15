@@ -1,0 +1,162 @@
+@import "./variables";
+@import "./mixins";
+/* ------| bootstrap |----- */
+.no-padding {
+  padding: 0;
+}
+a {
+  color:$white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color:$white;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+input[type=password] {
+  text-transform: none;
+}
+// input[type=number]::-webkit-inner-spin-button,
+// input[type=number]::-webkit-outer-spin-button {
+//   opacity: 1;
+//   background: black;
+//   color: black;
+//   -webkit-appearance: inner-spin-button !important;
+//   display: block;
+//   position: relative;
+//   cursor: default;
+//   // height: 3em;
+//   flex-grow: 0;
+//   flex-shrink: 0;
+//   flex-basis: auto;
+//   -webkit-user-select: block;
+//   z-index: 99999;
+// }
+
+/* Spin Buttons modified */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+
+.font-line-orange {
+    color: transparent;
+    -webkit-text-stroke: .1rem #FB5030;
+    margin: 0;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: $h-neue;
+    font-weight: 100;
+}
+html {
+  .row {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  input {
+    text-transform: uppercase;
+  }
+  h2 {
+    font-family: $px-black;
+    font-size: 3.4rem;
+    font-weight: 100;
+    -webkit-text-stroke: .1rem black;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    color: transparent;
+    margin: 0;
+    @media(min-width: 1024px) {
+      font-size: 4rem;
+    }
+    @media(min-width: 1450px) {
+      font-size: 6rem;
+    }
+  }
+  h3 {
+    font-family: $px-black;
+    font-size: 2rem;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    margin: 0;
+    color: $white;
+    @media(min-width: 1024px) {
+      font-size: 3rem;
+    }
+  }
+}
+.loader {
+  color: #FB5030;
+}
+.font-gatorade {
+  margin: 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: $h-neue;
+  color: #FB5030;
+}
+.font-gatorade-light {
+  margin: 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: $h-neuelt;
+  color: #FB5030;
+}
+
+//botons use the data_buttons variable from variables file;
+@each $class, $data_button in $data_buttons {
+  .button-#{$class} {
+    @include style-button(map-get($data_button, principal_bg), map-get($data_button, secondary_bg), map-get($data_button, first_color), map-get($data_button, second_color));
+    @media(min-width: 1024px) {
+      $map_desktop: map-get($data_buttons, map-get($data_button, data_query));
+      @include style-button(map-get($map_desktop, principal_bg), map-get($map_desktop, secondary_bg), map-get($map_desktop, first_color), map-get($map_desktop, second_color));
+    }
+  }
+}
+
+#___gatsby {
+  @media(min-width: 1024px) {
+    height: auto !important;
+  }
+}
+
+// input[type='date']{
+//   color:transparent;
+//   position: relative;
+//   &.not-empty{
+//     &:after{
+//     z-index: -1;
+//     color: transparent;
+//     }
+//   }
+// }
+// input[type='date']:after {
+//     color: #656161;
+//     content: attr(placeholder);
+//     width: 100%;
+//     position: absolute;
+//     background: white;
+//     left: 0;
+//     padding: 4% 1%;
+//     top: 0;
+//     height: 100%;
+// }
+
+// input[type='date']:focus{
+//   color: black;
+//   &:after{
+//     z-index: -1;
+//     color: transparent;
+//   }
+// }

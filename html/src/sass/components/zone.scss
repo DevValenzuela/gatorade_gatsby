@@ -1,0 +1,195 @@
+/**
+ * zone.scss
+ *
+ * These styles are for the redeem page.
+ *
+ * Index
+ * - Zone
+ *   |- Background image
+ *   |- Box zone
+ *     |- Title
+ *     |- Description
+ *     |- Form
+ *     |- Button
+ * - Zone-scanner
+ *   |- Background image
+ *   |- Box scanner
+ */
+// import variable sheet
+@import "../base/variables";
+// /*---| Zone |---*/
+.zone {
+  position: relative;
+  height: 100vh;
+  min-height: 35rem;
+  text-align: center;
+  @media(min-width: 1024px) {
+    height: 800px;
+    min-height: 100vh;
+  }
+  //Background image
+  &::before {
+    content: '';
+    background: url('../../images/bg-zone-mobil.png') center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    @media(min-width: 768px) {
+      background: url('../../images/bg-zone.png') center/cover no-repeat;
+    }
+  }
+  //Box zone
+  .box-zone {
+    z-index: 10;
+    margin-top: 100px;
+    width: 100%;
+    @media(min-width: 768px) {
+      margin-top: 220px;
+    }
+    //Title
+    h2 {
+      color: #FB5030;
+      -webkit-text-stroke: 0;
+      font-size: 3rem;
+      line-height: 0.64;
+      @media(min-width: 576px) {
+        font-size: 4.9rem;
+        letter-spacing: 10px;
+        font-weight: 900;
+        line-height: 1;
+      }
+      span {
+        font-size: 2.2rem;
+        @media(min-width: 576px) {
+          font-size: 4.9rem;
+          letter-spacing: 10px;
+          font-weight: 900;
+        }
+      }
+    }
+    //Description
+    p {
+      color: white;
+      font-family: $g-black;
+      margin: 40px 1rem 55px;
+      @media(min-width: 576px) {
+        margin: 81px 1rem 80px;
+        font-size: 1.6rem;
+        letter-spacing: 0.5px;
+      }
+    }
+    //Form
+    .form-group {
+      margin-bottom: 10px;
+      input,select {
+        height: 43px;
+        width: 255px;
+        margin: 0 auto;
+        font-family: $g-medium;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        color: $black;
+        text-align: center;
+        &::placeholder {
+          color: $black;
+          text-transform: uppercase;
+        }
+        @media(min-width: 768px) {
+          width: 390px;
+        }
+        @media(min-width: 1024px) {
+          height: 63px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    //Radio button
+    .select-button {
+      display: flex;
+      margin: 50px auto;
+      flex-wrap: wrap;
+      position: relative;
+      flex-direction: column;
+      @media(min-width: 1024px) {
+       flex-direction: row;
+       justify-content: center;
+      }
+      .form-label {
+        padding: 10px;
+        height: auto;
+        .text-first {
+          text-transform: uppercase;
+          font-family: $g-black;
+          color: $gray;
+          margin: 0;
+          line-height: 0;
+          font-size: 1.7rem;
+          letter-spacing: 3px;
+        }
+        .form-check  {
+          display: none;
+        }
+      }
+      .checked {
+        .text-first,
+        .text-second {
+          color: #ff4700;
+        }
+      }
+    }
+    //Button
+    .link {
+      margin: 20px auto 0px;
+    }
+  }
+  .text-error {
+    color: $red;
+    padding: 0 12px;
+    font-family: $g-black;
+    font-size: 1.1rem;
+    width: 255px;
+    line-height: 1;
+    text-align: center;
+    margin: 0 auto;
+
+    @media(min-width: 768px) {
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      width: 390px;
+    }
+  }
+}
+// /*---| Zone scanner |---*/
+.zone-scanner {
+  height: 100vh;
+  position: relative;
+  //Background image
+  &::before {
+    content: '';
+    background: url('../../images/bg-zone-mobil.png') center/cover no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    @media(min-width: 768px) {
+      background: url('../../images/bg-zone.png') center/cover no-repeat;
+    }
+  }
+  //Box scanner
+  .box-scanner{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 240px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media(min-width: 420px) {
+      max-width: 340px;
+    }
+    @media(min-width: 768px) {
+      max-width: 500px;
+    }
+  }
+}

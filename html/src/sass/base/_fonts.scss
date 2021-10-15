@@ -1,0 +1,233 @@
+// Font faces
+//
+// Instead of relying on the fonts that are available on a user's computer, you
+// can use web fonts which, like images, are resources downloaded to the user's
+// browser. Because of the bandwidth and rendering resources required, web fonts
+// should be used with care.
+//
+// Numerous resources for web fonts can be found on Google. Here are a few
+// websites where you can find Open Source fonts to download:
+// - http://www.fontsquirrel.com/fontface
+// - http://www.theleagueofmoveabletype.com
+//
+// In order to use these fonts, you will need to convert them into formats
+// suitable for web fonts. We recommend the free-to-use Font Squirrel's
+// Font-Face Generator:
+//   http://www.fontsquirrel.com/fontface/generator
+//
+// The following is an example @font-face declaration. This font can then be
+// used in any ruleset using a property like this:  font-family: Example, serif;
+//
+// Since we're using Sass, you'll need to declare your font faces here, then you
+// can add them to the font variables in the _init.scss partial.
+
+
+$fonts: '../../fonts' !default;
+
+@font-face {
+  font-family: 'Montserrat medium';
+  src: url('#{$fonts}/Montserrat/Montserrat-Medium.woff') format("woff"),
+  url('#{$fonts}/Montserrat/Montserrat-Medium.woff2') format("woff2"),
+  url('#{$fonts}/Montserrat/Montserrat-Medium.otf') format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gatorade black';
+  src: url('#{$fonts}/Gatorade/Gatorade-Black.ttf') format("truetype"),
+  url('#{$fonts}/Gatorade/Gatorade-Black.woff') format("woff"),
+  url('#{$fonts}/Gatorade/Gatorade-Black.otf') format("opentype");
+  font-display: swap;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gatorade bold';
+  src: url('#{$fonts}/Gatorade/Gatorade-Bold.ttf') format('truetype'),
+  url('#{$fonts}/Gatorade/Gatorade-Bold.woff') format("woff"),
+  url('#{$fonts}/Gatorade/Gatorade-Bold.otf') format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gatorade light';
+  src: url('#{$fonts}/Gatorade/Gatorade-Light.ttf') format('truetype'),
+  url('#{$fonts}/Gatorade/Gatorade-Light.woff') format("woff"),
+  url('#{$fonts}/Gatorade/Gatorade-Light.otf') format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gatorade medium';
+  src: url('#{$fonts}/Gatorade/Gatorade-Medium.ttf') format('truetype'),
+  url('#{$fonts}/Gatorade/Gatorade-Medium.woff') format("woff"),
+  url('#{$fonts}/Gatorade/Gatorade-Medium.otf') format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeuelLT';
+  src: url('#{$fonts}/Helvetica/Helvetica-roman.otf') format("opentype"),
+  url('#{$fonts}/Helvetica/Helvetica-roman.ttf') format('truetype'),
+  url('#{$fonts}/Helvetica/Helvetica-roman.woff2') format("woff2");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('#{$fonts}/Helvetica/Helvetica.ttf') format('truetype'),
+  url('#{$fonts}/Helvetica/Helvetica.woff') format("woff"),
+  url('#{$fonts}/Helvetica/Helvetica.otf') format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue regular';
+  src: url('#{$fonts}/Helvetica/HelveticaNeue-Regular.ttf') format('truetype'),
+  url('#{$fonts}/Helvetica/helveticaneue-regular.woff') format("woff"),
+  url('#{$fonts}/Helvetica/helveticaneue-regular.otf') format("opentype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'PlexesPro black';
+  src: url('#{$fonts}/Plexel/PlexesPro-Black.otf') format("opentype"),
+  url('#{$fonts}/Plexel/PlexesPro_Black.woff') format("woff"),
+  url('#{$fonts}/Plexel/PlexesPro_Black.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlexesPro book';
+  src: url('#{$fonts}/Plexel/PlexesPro-Book.otf') format('opentype'),
+  url('#{$fonts}/Plexel/Plexespro_book.woff') format("woff"),
+  url('#{$fonts}/Plexel/Plexespro_book.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlexesPro light';
+  src: url('#{$fonts}/Plexel/PlexesPro-Light.otf') format('opentype'),
+  url('#{$fonts}/Plexel/PlexesPro_Light.woff') format("woff"),
+  url('#{$fonts}/Plexel/PlexesPro_Light.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlexesPro medium';
+  src: url('#{$fonts}/Plexel/PlexesPro-Medium.otf') format('opentype'),
+  url('#{$fonts}/Plexel/PlexesPro_Medium.woff') format("woff"),
+  url('#{$fonts}/Plexel/PlexesPro_Medium.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+.icon-allies::before {
+  content: "";
+}
+
+.icon-contact::before, .menu-item.menu-item-36199::before {
+  content: "";
+}
+
+.icon-mail::before {
+  content: "";
+}
+
+.icon-downloads::before, .menu-item.menu-item-36198::before {
+  content: "";
+}
+
+.icon-events::before, .menu-item.menu-item-36202::before {
+  content: "";
+}
+
+.icon-videos::before, .menu-item.menu-item-36203::before {
+  content: "";
+}
+
+.icon-places::before {
+  content: "";
+}
+
+.icon-volume::before {
+  content: "";
+}
+
+.icon-arrow-left::before {
+  content: "";
+}
+
+.icon-arrow-right::before {
+  content: "";
+}
+
+.icon-arrow-up::before {
+  content: "";
+}
+
+.icon-arrow-down::before {
+  content: "";
+}
+
+.icon-facebook::before {
+  content: "";
+}
+
+.icon-gplus::before {
+  content: "";
+}
+
+.icon-read-more::before {
+  content: "";
+}
+
+.icon-linkedin::before {
+  content: "";
+}
+
+.icon-message::before {
+  content: "";
+}
+
+.icon-twitter::before {
+  content: "";
+}
+
+.icon-youtube::before {
+  content: "";
+}
+
+.icon-instagram::before {
+  content: "";
+}
+
+.icon-menu::before {
+  content: "";
+}
+
+.icon-search::before {
+  content: "";
+}

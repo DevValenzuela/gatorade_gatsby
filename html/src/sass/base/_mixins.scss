@@ -1,0 +1,87 @@
+@import "../base/variables";
+
+//style button
+@mixin style-button($principal_bg, $secondary_bg, $first_color, $second_color) {
+  background: $principal_bg;
+  transform: skewX(-31deg);
+  width: 180px;
+  text-align: center;
+  @media (min-width: 576px) {
+    width: 228px;
+  }
+  @media (min-width: 1500px) {
+    width: 299px;
+  }
+  @media (min-width: 2000px) {
+    width: 400px;
+  }
+  &:hover {
+    background: $secondary_bg;
+    a, input {
+      color: $second_color;
+    }
+  }
+  a, input {
+    display: block;
+    transform: skewX(31deg);
+    text-transform: uppercase;
+    font-family: $g-black;
+    font-size: 19px;
+    color: $first_color;
+    padding: 0.3rem;
+    width: 100%;
+    text-decoration: none;
+    @media (min-width: 576px) {
+      max-width: 540px;
+      font-size: 1.3rem;
+    }
+    @media (min-width: 1500px) {
+      font-size: 1.8rem;
+    }
+    @media (min-width: 2000px) {
+      font-size: 2.2rem;
+    }
+  }
+  input {
+    background: transparent;
+    border: none;
+  }
+}
+
+// title-principal
+@mixin title-principal {
+  h1 {
+    font-family: 'HelveticaNeuelLT' !important;
+    font-size: 55px !important;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $white;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px){
+    max-width: 720px;
+  }
+  @media (min-width: 992px){
+    max-width: 960px;
+  }
+  @media (min-width: 1200px){
+    max-width: 1140px;
+  }
+  @media (min-width: 1440px) {
+    max-width: 1200px;
+  }
+}
+
+
+
+

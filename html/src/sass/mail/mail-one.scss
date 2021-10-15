@@ -1,0 +1,55 @@
+.mail-one {
+  height: 40rem;
+  background-image: url('../../images/backgroun-mail-one.png');
+  background-size: cover;
+  position: relative;
+  width: 33.4rem;
+  .text-mail-one {
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    padding: 1rem 2rem;
+    max-width: 18rem;
+    h5.title {
+      color: white;
+      text-transform: uppercase;
+      font-family: 'PlexesPro black';
+      margin: 0;
+    }
+    h2.subtitle {
+      font-family: 'Gatorade black';
+      font-size: 2.6rem;
+       -webkit-text-stroke: unset;
+       color: white;
+    }
+  }
+  .button-regist {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+    background: #ff4700;
+    border-radius: 1rem;
+    width: 17rem;
+    height: 2.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      text-transform: uppercase;
+      color: white !important;
+      font-family: 'Montserrat medium';
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        background-image: url('../../images/icon-button-mail-one.png');
+        background-repeat: no-repeat;
+        transform: translateY(0.2rem);
+        margin-left: 0.6rem;
+      }
+    }
+  }
+}
